@@ -1,0 +1,142 @@
+<html>
+<head>
+  <title>Contact Us</title>
+  <link rel="stylesheet" type="text/css" href="css/style3.css">
+</head>
+<body>
+    <header>
+	 <script>
+	     function Validation()
+		 {  	 
+		    var uname = document.getElementById('uname').value;
+		      if(uname=="")
+			   {
+			      document.getElementById('name').innerHTML="**fill this field";
+				  return false;
+			   }
+			   if((uname.length <=2) || (uname.length>10))
+			    {  
+				   document.getElementById('name').innerHTML="**Please fill atleast 2 to 10 character";
+				   return false;
+				}
+			   if(!isNaN(uname)) 
+			    {
+				   document.getElementById('name').innerHTML="**only characters are allowed";
+				   return false;
+				}
+				
+				
+		    var lastname = document.getElementById('lastname').value;
+			    if(lastname=="")
+			   {
+			      document.getElementById('lname').innerHTML="**fill this field";
+				  return false;
+			   }
+			   if((lastname.length <=2) || (uname.length>20))
+			    {  
+				   document.getElementById('lname').innerHTML="**Please fill atleast 2 to 10 character";
+				   return false;
+				}
+			   if(!isNaN(lastname)) 
+			    {
+				   document.getElementById('lname').innerHTML="**only characters are allowed";
+				   return false;
+				}
+				
+			
+			
+			var phonenumber = document.getElementById('phonenumber').value;
+			   if(phonenumber=="")
+			    {
+			      document.getElementById('phone').innerHTML="**fill this field";
+				  return false;
+			    }
+			    if(isNaN(phonenumber))
+				{
+                   	document.getElementById('phone').innerHTML="**only numeric are allowed";
+				    return false;			 
+				}
+			    if(phonenumber.length!=10)
+				{
+				    document.getElementById('phone').innerHTML="**mobile number must be in 10 digits";
+				    return false;	
+				}
+			
+			
+			
+			var emailadd = document.getElementById('emailadd').value;
+			   if(emailadd=="")
+			    {
+			       document.getElementById('email').innerHTML="**fill this field";
+				   return false;
+			    }
+				if(emailadd.indexOf('@')<=0)
+				{
+				   document.getElementById('email').innerHTML="** Invalid Email";
+				   return false;
+				}
+				if((emailadd.charAt(emailadd.length-4)!='.') && (emailadd.charAt(emailadd.length-3)!='.'))
+				{
+				   document.getElementById('email').innerHTML="**Invalid Email";
+				   return false;
+				}
+			
+			
+			
+			var password = document.getElementById('password').value;
+			   if(password=="")
+			   {
+			      document.getElementById('pass').innerHTML="**fill this field";
+				  return false;
+			   }
+			   if((password.length <=8) || (password.length>10))
+			    {  
+				   document.getElementById('pass').innerHTML="**Please fill atleast 8 to 10 password";
+				   return false;
+				}
+		     
+			
+		 }
+		 
+		 
+	 </script>
+	   <div class="contact">
+	      <div class="logo">
+	        <img src="logo1.jpg">		 
+		  </div>
+		  <ul>
+			    <li><a href="index.html">Home</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="About us.html">About Us</a></li>
+				<li class="active"><a href="contactus.html">Contact Us</a></li>
+			</ul>
+	  
+	   <div class="title3">
+		     <h1>CONTACT US</h1>
+		</div>
+		<!--<form class="box" action=".html" method="post">//-->
+		    <form class="box" action="hiee.html" method="post" onsubmit="return Validation()">
+			
+		         <input type="text" id="uname" placeholder="Name">
+			     <span id="name" style="color:white;"></span>
+			
+			     <input type="text" id="lastname" placeholder="Last Name">
+			     <span id="lname" style="color:white;"></span>
+			
+			     <input type="text" id="phonenumber" placeholder="Phone Number">
+			     <span id="phone" style="color:white;"></span>
+			
+			     <input type="text" id="emailadd" placeholder="Email Address">
+			     <span id="email" style="color:white;"></span>
+			
+			     <input type="password" id="password" placeholder="Password">
+			     <span id="pass" style="color:white;"></span>
+			
+			     <input type="text" name="" placeholder="Comment or Message">
+			     <input type="submit" name="" value="Submit" >
+		    </form>
+	</header>
+	 </div>
+</body>
+</html>
